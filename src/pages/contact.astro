@@ -1,0 +1,51 @@
+---
+import Layout from "./layouts/Layout.astro";
+import Heading from "../components/Heading.astro";
+import Map from "../components/Map.astro";
+const title = "Contact Us"
+const description = ""
+---
+
+<Layout title={`${title} | Freeway Mobile Tyres`} description={description} noindex={false}>
+    <main>
+        <!-- Heading -->
+        <Heading heading={title} />
+        <!-- Content -->
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <h2>Get In Touch With Our Team</h2>
+                    <p>If you would like a quote for our services, or require more information on a particular issue, you can get in touch with us via email or using our quotation form. A member of our will respond within 24 to 48 hours of your initial contact. </p>
+                    <p>For a more immediate response, we encourage you to call us directly.</p>
+                    <div>
+                        <i class="bi bi-telephone-fill me-2"></i> 0115 727 0767
+                    </div>
+                    <div>
+                        <i class="bi bi-envelope-fill me-2"></i> mobile@lindleys.com
+                    </div>
+                    <div>
+                        <i class="bi bi-map-fill me-2"></i> Nottingham Rd, Arnold, Nottingham NG5 6JZ
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2>Leave Us A Review!</h2>
+                    <p>We’d love to hear your feedback if you’ve recently used our service. Follow the links below to leave a review for our business.</p>
+                    <div>
+                        <i class="bi bi-google me-2"></i> Review us on <a href="#" target="_blank">Google</a>
+                    </div>
+                    <div>
+                        <i class="bi bi-facebook me-2"></i> Review us on <a href="#" target="_blank">Facebook</a>
+                    </div>
+                    <div>
+                        <i class="bi bi-yelp me-2"></i> Review us on <a href="#" target="_blank">Yell</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <Map />
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
