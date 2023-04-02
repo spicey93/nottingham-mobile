@@ -1,15 +1,69 @@
 ---
+import Layout from "./layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTA from "../components/CTA.astro";
+const bgImg = "url(/img/mobile-tyre-fitting-van.jpeg)"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Mobile Tyre Service In Nottingham | Lindleys" description="Get back on the road with Lindleys, the premier mobile tyre service in Nottingham. Whether you're stranded with a flat tyre or just need new tyres fitted, our expert team can come to you at home, work, or roadside to provide fast, reliable service. With same-day fitting available and an average arrival time of just 60 minutes, we're one of Nottingham's fastest and most convenient tyre services. Contact us today to get a quote and experience the Lindleys difference!" noindex={false}>
+	<Hero heading="Change Your Tyres The Easy Way" tagline="Expert tyre fitting at your doorstep. We come to you at home, work or roadside." bgImg={bgImg}/>
+	<div class="container py-5">
+		<h1 class="text-center mb-5">Convenient Mobile Tyre Fitting Services in Nottinghamshire</h1>
+		<div class="row">
+			<div class="col-12 col-md-6">
+				<p>At Lindleys  Autocentres, we understand that your time is valuable, which is why we offer a <strong>mobile tyre fitting service</strong> that comes to you. </p>
+				<p>Our experienced technicians will fit your new tyres at a location that is convenient for you, whether it be at your home, office, or on the roadside.</p>
+				<p>We use state-of-the-art equipment to ensure that your new tyres are fitted safely and securely, with minimal disruption to your day.</p>
+			</div>
+			<div class="col-12 col-md-6">
+				<p>Our mobile tyre fitting service is available throughout <strong>Nottinghamshire</strong>, and we pride ourselves on our efficient and professional approach.</p>
+				<p>We also stock a wide range of tyres from leading manufacturers, ensuring that we have the right tyres for your vehicle at competitive prices.</p>
+				<p>Contact us today to schedule your mobile tyre fitting appointment, and experience the convenience and quality that Lindleys Autocentres has to offer.</p>
+			</div>
+		</div>
+		<section class="container">
+            <div class="col-10 offset-1">
+    
+                <div class="text-center pt-5">
+                    <h2 class="mb-3">Our Services</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <Card cardTitle="Mobile Tyre Fitting" cardText="Tyres Fitted at Home, Work Or Roadside" cardLink="/tyre-services/mobile-tyre-fitting">
+                                <i class="bi bi-car-front fs-1 mb-3"></i>
+                            </Card>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <Card cardTitle="Puncture Repair" cardText="We'll Come To You And Fix Your Flat Tyre" cardLink="/tyre-services/mobile-tyre-repair">
+                                <i class="bi bi-vinyl fs-1 mb-3"></i>
+                            </Card>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <Card cardTitle="Caravan Tyre Fitting" cardText="Change Your Caravan Tyres The Easy Way" cardLink="/tyre-services/mobile-caravan-tyre-fitting">
+                                <i class="bi bi-truck fs-1 mb-3"></i>
+                            </Card>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <Card cardTitle="Locking Wheel Nut Removal" cardText="All Car Makes & Models Covered" cardLink="/other-services/locking-wheel-nut-removal">
+                                <i class="bi bi-wrench-adjustable fs-1 mb-3"></i>
+                            </Card>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <Card cardTitle="Tyre Pressure Sensors" cardText="TPMS Diagnostics & Repair" cardLink="/other-services/tpms">
+                                <i class="bi bi-wifi fs-1 mb-3"></i>
+                            </Card>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <Card cardTitle="Batteries" cardText="Car & Van Battery Replacement at Home" cardLink="/services/alloygator-wheel-protection">
+                                <i class="bi bi-battery-charging fs-1 mb-3"></i>
+                            </Card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</div>
+	<Testimonials />
+	<CTA />
+</Layout>

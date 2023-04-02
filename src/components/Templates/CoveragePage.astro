@@ -1,0 +1,51 @@
+---
+import Layout from "../../pages/layouts/Layout.astro";
+import Hero from "../Hero.astro";
+import Testimonials from "../Testimonials.astro";
+import CTA from "../CTA.astro";
+import AsideCards from "../AsideCards.astro";
+
+export interface Props {
+    city: string,
+    about: string,
+}
+
+const { city, about } = Astro.props;
+---
+
+<Layout title={`Mobile Tyre Fitting In ${city} | Lindleys`} noindex={false} description={`"Are you stuck with a flat tyre in ${city}? Our mobile tyre fitting can come to you at home or roadside today! Get a quote now."`}>
+    <Hero bgImg="url(/img/mobile-tyre-fitting-van.jpeg)" heading={`Mobile Tyre Fitting In ${city}`} tagline="We Come To You At Home, Work Or Roadside"/>
+    <main class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h1 class="text-center text-lg-start">Mobile Tyre Fitting In {city}</h1>
+                    <p>Do you find yourself stranded with a <strong>flat tyre in {city}?</strong> Maybe your tyres have worn out, but you're too busy to visit a garage. Consider using our hassle-free mobile tyre fitting service instead! Our team can travel to your location, whether it's at home or on the roadside, and install new tyres for you today.</p>
+                    <div class="p-4 bg-light my-3 rounded-3">
+                        <h2>About {city}</h2>
+                        <p>{about}</p>
+                    </div>
+                    <h2>Tyre Services In {city}</h2>
+                    <p>Lindleys Autocentres offers a range of services in {city} and the surrounding areas to help keep your vehicle running safely and efficiently. Our <a href="/tyre-services/mobile-tyre-repair"><strong>puncture repair</strong></a> service is available to fix any holes or damage to your tyres, saving you the cost of buying new tyres. We also offer <a href="/other-services/locking-wheel-nut-removal"><strong>locking wheel nut removal</strong></a> services for those who have lost or damaged their locking wheel nut key.</p>
+                    <p>If you're having trouble starting your vehicle, our <a href="/other-services/batteries"><strong>battery replacement</strong></a> service can help. We offer battery replacement services for all makes and models of vehicles in {city} and the surrounding areas. Additionally, if your vehicle is equipped with <a href="/other-services/tpms"><strong>TPMS</strong></a>, we can program and calibrate your sensors to ensure that they are providing accurate information about your tyre pressures at all times.</p>
+                    <h2>Why Choose Lindleys Mobile Tyres</h2>
+                    <p>Lindleys Autocentres is a leading <a href="/tyre-services/mobile-tyre-fitting"><strong>mobile tyre fitting company</strong></a> in {city} that stands out from our competitors for several reasons:</p>
+                    <ul>
+                        <li>Convenient and efficient service that comes to you</li>
+                        <li>Experienced technicians who use state-of-the-art equipment</li>
+                        <li>Wide range of tyres from leading manufacturers at competitive prices</li>
+                        <li>Exceptional customer service and integrity as a family-run business</li>
+                        <li>Open 6 days a week with <a href="/tyre-services/same-day-mobile-tyre-fitting"><strong>same day fitting</strong></a> available</li>
+                    </ul>
+                    <h2>Get A Quote For Tyres In {city}</h2>
+                    <p>At Lindleys Autocentres, we are committed to providing our customers in {city} with a range of high-quality services that are both efficient and affordable. <a href="/contact">Contact us</a> today to learn more about our services or to schedule an appointment.</p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <AsideCards />
+                </div>
+            </div>
+        </div>
+    </main>
+    <Testimonials />
+    <CTA />
+</Layout>
