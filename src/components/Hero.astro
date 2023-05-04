@@ -2,6 +2,8 @@
 import Reviews from "./Hero/Reviews.astro";
 import Features from "./Hero/Features.astro";
 import Quote from "./Hero/Quote.astro";
+import Tyreclick from "./Tyreclick.astro";
+import FormTest from "./FormTest.astro";
 const { bgImg, heading, tagline } = Astro.props;
 ---
 
@@ -15,8 +17,10 @@ const { bgImg, heading, tagline } = Astro.props;
                 <Features />
             </div>
             <div class="col-12 offset-lg-2 col-lg-4 d-flex justify-content-center align-items-center flex-column">
-                <Quote />
-                <p class="text-white mt-3 text-center">Do you need help ASAP? <br /> <span class="fw-bold">Call Us On <a href="tel:01157270767" id="heroPhone">0115 727 0767</a></span></p>
+                <!-- <p class="text-white mt-3 text-center">Do you need help ASAP? <br /> <span class="fw-bold">Call Us On <a href="tel:01157270767" id="heroPhone">0115 727 0767</a></span></p> -->
+                <!-- <Tyreclick/> -->
+                <!-- <Quote /> -->
+                <FormTest />
             </div>
         </div>
     </div>
